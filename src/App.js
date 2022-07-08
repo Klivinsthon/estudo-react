@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import Planet from './components/planets/planet';
 
 function App() {
   return (
     <div>
       <Planet url="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mercury_in_color_-_Prockter07-edit1.jpg/280px-Mercury_in_color_-_Prockter07-edit1.jpg"
-              description="Mercúrio é o menor[nota 1][nota 2] e mais interno planeta do Sistema Solar, orbitando o Sol a cada 87,969 dias terrestres."
+              description="Mercúrio é o menor e mais interno planeta do Sistema Solar, orbitando o Sol a cada 87,969 dias terrestres."
               name="Mercúrio"
               wiki="https://pt.wikipedia.org/wiki/Merc%C3%BArio_(planeta)"/>
       <hr/>
