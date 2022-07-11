@@ -32,12 +32,12 @@ class Planets extends React.Component {
                     this.state.planets.map(
                         (s, i) => {
                             return (
-                                    <PlanetBase
-                                        img={s.img_url}
-                                        name={s.name}
-                                        description={s.description}
-                                        key={i}
-                                    />
+                                <PlanetBase
+                                    img={s.img_url}
+                                    name={s.name}
+                                    description={s.description}
+                                    key={i}
+                                />
                             )
                         }
                     )
