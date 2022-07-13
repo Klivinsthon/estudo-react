@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import PlanetBase from "./planetBase";
 
 async function getPlanets() {
@@ -7,44 +7,19 @@ async function getPlanets() {
     return planetData
 }
 
-class Planets extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            planets: []
-        }
-    }
+function Planets() {
+    const [planets, setPlanets] = useState(0)
 
-    componentDidMount() {
-        getPlanets().then(
-            planetData => {
-                this.setState({
-                    planets: this.state.planets = planetData["planets"]
-                })
-            }
-        )
-    }
-
-    render() {
-        return (
-            <Fragment>
-                {
-                    this.state.planets.map(
-                        (s, i) => {
-                            return (
-                                <PlanetBase
-                                    img={s.img_url}
-                                    name={s.name}
-                                    description={s.description}
-                                    key={i}
-                                />
-                            )
-                        }
-                    )
-                }
-            </Fragment>
-        )
-    }
+    return (
+        <Fragment>
+            <PlanetBase
+                img={}
+                name={}
+                description={}
+                key={}
+            />
+        </Fragment>
+    )
 }
 
 export default Planets

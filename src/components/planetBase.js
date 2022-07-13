@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 
-class PlanetBase extends React.Component {
-    render() {
+function PlanetBase() {
         return(
             <Fragment>
                 <img src={this.props.img}/>
@@ -9,7 +8,6 @@ class PlanetBase extends React.Component {
                 <p>{this.props.description}</p>
             </Fragment>
         )
-    }
 }
 
 export default PlanetBase
