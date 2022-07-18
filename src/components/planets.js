@@ -1,18 +1,20 @@
-import React, {useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import PlanetBase from "./planetBase";
 
 function Planets() {
     const [planets, setPlanets] = useState([])
     
+    /* REQUISIÇÃO LOCAL RETORNANDO PLANETAS */
     async function getPlanets() {
         const response = await fetch("http://localhost:3000/planets-api/planets.json")
         const planetData = await response.json()
         setPlanets(planetData["planets"])
     }
 
-    useEffect(() => {
-        getPlanets()
-    }, [])
+    useEffect(
+        () => {
+            getPlanets()
+        }, [])
 
     return (
         planets.map(
