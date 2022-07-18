@@ -1,17 +1,17 @@
 import React, {useState, useEffect } from "react";
 import PlanetBase from "./planetBase";
 
-async function getPlanets() {
-    const response = await fetch("http://localhost:3000/planets-api/planets.json")
-    const planetData = await response.json()
-    return planetData["planets"]
-}
-
 function Planets() {
     const [planets, setPlanets] = useState([])
+    
+    async function getPlanets() {
+        const response = await fetch("http://localhost:3000/planets-api/planets.json")
+        const planetData = await response.json()
+        setPlanets(planetData["planets"])
+    }
 
     useEffect(() => {
-        setPlanets(getPlanets().promiseResult())
+        getPlanets()
     }, [])
 
     return (
