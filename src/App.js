@@ -1,10 +1,9 @@
-import React from "react";
-import Planets from "./components/planets";
+import Form from "./form";
 
 function App() {
   return (
     <div>
-      <Planets/>
+      <Form />
     </div>
   )
 }
